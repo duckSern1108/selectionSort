@@ -46,7 +46,7 @@ function App() {
                             i: 0,
                             j: 1,
                             minId: 0,
-                            arr: JSON.parse([`${arrayInput.current.value`}]),
+                            arr: JSON.parse(`[${arrayInput.current.value}]`),
                         });
                         setStart(true);
                     }}
@@ -55,7 +55,7 @@ function App() {
                     <input type="text" ref={arrayInput} />
                     <button>Start</button>
                 </form>
-                <label>Slow </label>
+                <label>Fast</label>
                 <input
                     type="range"
                     min="500"
@@ -63,10 +63,7 @@ function App() {
                     value={speed}
                     onChange={(e) => setSpeed(e.target.value)}
                 />
-                <label>Fast </label>
-                <button onClick={(start) => setStart(!start)}>
-                    {start ? "Stop" : "Resume"}{" "}
-                </button>
+                <label>Slow</label>
             </div>
             <hr />
             <div style={{ padding: "50px" }}>

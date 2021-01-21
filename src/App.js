@@ -38,6 +38,7 @@ function App() {
     return (
         <>
             <div style={{ padding: "20px" }}>
+                <p>Nhập data như array bình thường ví dụ : 1,2,3,4,5</p>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -45,7 +46,7 @@ function App() {
                             i: 0,
                             j: 1,
                             minId: 0,
-                            arr: JSON.parse(arrayInput.current.value),
+                            arr: JSON.parse([`${arrayInput.current.value`}]),
                         });
                         setStart(true);
                     }}
